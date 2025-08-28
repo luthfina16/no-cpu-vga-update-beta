@@ -1,0 +1,34 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+Δ  Δ ***    branches: [ "main" ]
+Δ  Δ ***
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - Δ  Δ ***uses: actions/checkout@v4
+    - name: configure
+      run: ./configure
+    - name: make
+    Δ  Δ ***
+      run: make
+      Δ  Δ ***
+    - name: make check
+      run: make check  Δ  Δ ***
+    - name: make check
+      run: make check  Δ  Δ ***
+      Δ  Δ ***run: make distcheck
+      Δ  Δ ***
+      name: make check
+      run: make check
+      name: make check
+      run: make check
+      run: make check
+      run: make distcheck
+      
