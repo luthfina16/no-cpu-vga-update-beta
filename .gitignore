@@ -1,0 +1,139 @@
+# SPDX-FileCopyrightText: 2013 Stefano Babic <stefano.babic@swupdate.org>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# Normal rules
+#
+
+*.rej
+*.orig
+*.a
+*.o
+*.so.*
+*.su
+*~
+*.swp
+*.patch
+*.bin
+
+#
+# Kbuild ignores
+#
+.*
+*.o
+*.o.*
+*.a
+*.s
+scripts/basic/fixdep
+scripts/kconfig/mconf
+scripts/kconfig/zconf.hash.c
+scripts/kconfig/zconf.lex.c
+scripts/kconfig/zconf.tab.c
+
+#
+swupdate
+swupdate_unstripped*
+lua_swupdate.so*
+tools/*_unstripped
+tools/swupdate-client
+tools/swupdate-progress
+tools/swupdate-ipc
+tools/*.map
+tools/*.out
+
+#
+# Test unit
+#
+test/test_crypt
+test/test_hash
+test/test_json
+test/test_flash_handler
+test/test_server_hawkbit
+test/test_util
+test/test_verify
+test/*.out
+test/*.map
+
+
+#
+# Generated files
+#
+
+*.depend*
+include/autoconf.h
+include/config/
+include/generated/
+doc/build
+doc/source/images/statemachine.png
+
+# stgit generated dirs
+patches-*
+.stgit-edit.txt
+
+# quilt's files
+patches
+series
+
+#
+# Backups / patches
+#
+*~
+*.orig
+*.rej
+/*.patch
+
+#
+# debugging stuff
+#
+.gdb_history
+.gdbinit
+.gdb_history
+
+# cscope files
+cscope.*
+
+# tags files
+/tags
+/ctags
+/etags
+
+#
+# acceptance-tests
+#
+scripts/acceptance-tests
+
+#
+# mischellaneous
+#
+scripts/basic/docproc
+scripts/basic/split-include
+scripts/kconfig/conf
+scripts/kconfig/lex.zconf.c
+scripts/kconfig/lxdialog/lxdialog
+
+#
+# web-app
+#
+web-app/dist/
+web-app/node_modules/
+web-app/package-lock.json
+web-app/swupdate-www.tar.gz
+
+# ci
+!.gitlab-ci.yml
+!.github
+
+# swupdateclient
+Pipfile
+Pipfile.lock
+tools/python/swupdateclient/Pipfile.lock
+tools/python/swupdateclient/build/
+tools/python/swupdateclient/swupdateclient.egg-info/
+
+# Python
+__pycache__
